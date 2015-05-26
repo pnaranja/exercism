@@ -3,7 +3,7 @@
 ;[?] of beer on the wall, [?] of beer.
 ;[?] , [?] of beer on the wall.
 
-(defn song_template [beers1 beers2 take_or_buy beers_on_wall]
+(defn- song_template [beers1 beers2 take_or_buy beers_on_wall]
   (str beers1 " of beer on the wall, " beers2 " of beer.\n" take_or_buy ", " beers_on_wall " of beer on the wall.\n"))
 
 (defn verse [beers]
