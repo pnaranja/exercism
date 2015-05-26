@@ -13,7 +13,7 @@
     0 (song_template "No more bottles" "no more bottles" "Go to the store and buy some more" "99 bottles") 
     (song_template  (str beers " bottles") (str beers " bottles") "Take one down and pass it around" (str (- beers 1) " bottles"))))
 
-(defn apply_verses [start-beers end-beers]
+(defn- apply_verses [start-beers end-beers]
   (clojure.string/join "\n" (map (fn [x] (verse x)) (range start-beers (- end-beers 1) -1))))
 
 (defn sing 
