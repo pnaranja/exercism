@@ -8,7 +8,9 @@
   (add-unused-dna (frequencies (seq (char-array dna)))))
 
 (defn count [nucleotide dna]
-  (if (empty? dna) 
-    0 
-    ((nucleotide-counts dna) nucleotide))
-  )
+  (if (not (or (= \A nucleotide) (= \T nucleotide) (= \C nucleotide) (= \G nucleotide))) 
+    (throw (Exception. "invalid nucleotide")) 
+    (if (empty? dna) 
+      0 
+      ((nucleotide-counts dna) nucleotide)))
+)
