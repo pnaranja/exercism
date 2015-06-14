@@ -1,6 +1,7 @@
 (ns nucleotide-count)
 
 (defn add-unused-dna [counts]
+"Adds the possibility if no counts are found"
   (merge-with + counts {\A 0, \T 0, \C 0, \G 0}))
 
 (defn nucleotide-counts [dna]
