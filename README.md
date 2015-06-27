@@ -1,2 +1,2 @@
 # exercism
-Exercises done for exercism.io
+Clojure exercises done for exercism.io
