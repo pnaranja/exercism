@@ -7,4 +7,4 @@
     (and (not (= w1 w2))
          (= (sort w1) (sort w2)))))
 
-(defn anagrams-for [word word-list]  (filter #(anagram? word %) word-list))
+(defn anagrams-for [word word-list]  (filter (partial anagram? word ) word-list))
